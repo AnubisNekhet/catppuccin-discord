@@ -1,0 +1,70 @@
+// filled buttons and badges should have crust text
+[class*="lookFilled-"] {
+  &[class*="colorBrand-"],
+  &[class*="colorBrandNew-"],
+  &[class*="colorLink-"],
+  &[class*="colorYellow-"],
+  &[class*="colorRed-"],
+  &[class*="colorGreen-"] {
+    color: $crust;
+
+    // darken the nitro button too
+    svg[class^="premiumIcon"] {
+      color: darken($pink, 20%);
+    }
+
+    // spinner color
+    [class*="spinnerItem-"] {
+      background-color: $crust;
+    }
+  }
+
+  // ...unless it's primary
+  &[class*="colorPrimary-"] {
+    color: $text;
+  }
+}
+
+// buttons in sidebar when in calls
+div[class^="actionButtons-"] {
+  [class^="button-"][class*="buttonColor-"],
+  [class^="button-"] [class*="buttonColor-"] {
+    background-color: $surface1;
+
+    &[class*="buttonActive-"] {
+      background-color: $green;
+      color: $crust;
+
+      [class*="buttonContents-"] {
+        color: $crust;
+
+        svg {
+          color: $crust;
+        }
+      }
+    }
+  }
+}
+
+// lookInverted buttons should have darker brand text
+[class*="lookInverted-"][class*="colorBrand-"] {
+  color: var(--brand-experiment-600);
+
+  // darken the nitro button too
+  svg[class^="premiumIcon"] {
+    color: darken($pink, 15%);
+  }
+}
+
+// lookLink + colorPrimary should be themed
+.theme-dark,
+.theme-light {
+  [class*="lookLink-"][class*="colorPrimary-"] {
+    color: $text;
+  }
+}
+
+// dangerous button when hovered is colored properly
+div[class*="button-"][class*="dangerous-"]:hover {
+  color: darken($red, 10%);
+}
