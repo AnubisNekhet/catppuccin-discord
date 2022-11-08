@@ -1715,4 +1715,11 @@ div[class^=base] > div[class^=content] > div[class^=container] {
   background-color: #1e1e2e !important;
 }
 
+.vc-spotify-button-row .vc-spotify-button.vc-spotify-shuffle-on, .vc-spotify-button-row .vc-spotify-button.vc-spotify-repeat-context, .vc-spotify-button-row .vc-spotify-button.vc-spotify-repeat-track {
+  color: var(--interactive-normal);
+}
+.vc-spotify-button-row .vc-spotify-button.vc-spotify-repeat-off, .vc-spotify-button-row .vc-spotify-button.vc-spotify-shuffle-off {
+  color: var(--text-muted);
+}
+
 /*# sourceMappingURL=mocha.theme.css.map */
