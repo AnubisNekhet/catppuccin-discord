@@ -1,3 +1,4 @@
+@import "components/anubis-tweaks";
 @import "components/variables";
 
 @import "components/icons-bgImg";
@@ -77,17 +78,4 @@ div[class*="live-"][class*="badge-"] {
 // 'peopleList' background, friendslist, is not set via the variable
 div[class^="base"] > div[class^="content"] > div[class^="container"] {
   background-color: $base !important;
-}
-
-// vencord spotify plugin button theming support (uses vencord-specific classes)
-.vc-spotify-button-row .vc-spotify-button {
-  &.vc-spotify-shuffle-on,
-  &.vc-spotify-repeat-context,
-  &.vc-spotify-repeat-track {
-    color: var(--interactive-normal);
-  }
-  &.vc-spotify-repeat-off,
-  &.vc-spotify-shuffle-off {
-    color: var(--text-muted);
-  }
 }
